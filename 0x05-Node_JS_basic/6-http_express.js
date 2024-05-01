@@ -5,7 +5,7 @@ const port = 1745;
 
 app.get('/', (req, res) => {
   res.send('Hello Holberton School!');
-}); // <- Add closing parenthesis here
+});
 
 app.listen(port);
 
