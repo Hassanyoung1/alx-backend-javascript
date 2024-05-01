@@ -3,7 +3,10 @@ const fs = require('fs');
 function countStudents(path) {
   const promise = (resolve, reject) => {
     fs.readFile(path, 'utf8', (error, data) => {
-      if (error) reject(new Error('Cannot load the database'));
+      if (error || data === undefined) {
+        reject(new Error('Cannot load the database'));
+        return;
+      }
 
       const messages = [];
       let message;
@@ -17,13 +20,13 @@ function countStudents(path) {
 
       const subjects = {};
       for (const i in students) {
-        if (i !== '0') { // Changed the condition to compare strings
+        if (i !== '0') {
           if (!subjects[students[i][3]]) subjects[students[i][3]] = [];
           subjects[students[i][3]].push(students[i][0]);
         }
       }
 
-      delete subjects.subject; // Corrected the key used for deletion
+      delete subjects.subject;
       for (const key of Object.keys(subjects)) {
         message = `Number of students in ${key}: ${
           subjects[key].length
