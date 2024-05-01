@@ -14,7 +14,7 @@ function countStudents(path) {
         const field = fields[3].trim(); // Assuming fourth field is the field name
 
         // Increment total students count for each valid line
-        totalStudents += 1;
+        totalStudents++;
 
         // Initialize the array for the field if it doesn't exist
         studentsByField[field] = studentsByField[field] || [];
@@ -32,5 +32,4 @@ function countStudents(path) {
     throw new Error('Cannot load the database');
   }
 }
-
 module.exports = countStudents;
