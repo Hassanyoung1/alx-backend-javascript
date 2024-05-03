@@ -2,13 +2,18 @@
   "name": "0x06-unittests_in_js",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "0-calcul.js",
+  "directories": {
+    "test": "test"
+  },
   "scripts": {
     "test": "mocha"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "mocha": "^10.4.0"
+    "chai": "^5.1.0",
+    "mocha": "^10.4.0",
+    "selenium-webdriver": "^4.16.0"
   }
 }
