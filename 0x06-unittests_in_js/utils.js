@@ -1,4 +1,3 @@
-// 3. Create a function named calculateNumber that accepts a type, two numbers, and returns a number depending on the type of operation.
 const Utils = {
     calculateNumber(type, a, b) {
         const num1 = Math.round(a);
@@ -14,5 +13,6 @@ const Utils = {
             return num1 / num2;
         }
     }
+};
 
 module.exports = Utils;
