@@ -1,14 +1,19 @@
-const assert = require('assert');
+'use strict';
+const request = require('request');
+const chai = require('chai');
 
-const { app } = require('./api');
-
-describe('API', () => {
-    it('should return 200', async () => {
-        const response = await app.inject({
+describe('basic integration testing', () => {
+  describe('GET /', () => {
+    it('endpoint GET /', (done) => {
+      const call = {
+        url: 'http://localhost:7865',
         method: 'GET',
-        url: '/',
-        });
-
-        assert.strictEqual(response.statusCode, 200);
+      };
+      request(call, (error, response, body) => {
+        chai.expect(response.statusCode).to.equal(200);
+        chai.expect(body).to.equal('Welcome to the payment system');
+        done();
+      });
     });
-    });
+  });
+});

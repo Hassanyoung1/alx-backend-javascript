@@ -1,20 +1,17 @@
 {
-  "name": "8-api",
+  "name": "task_0",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "",
+  "main": "0-calcul.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "express": "^4.17.1"
-  },
   "devDependencies": {
     "chai": "^4.2.0",
-    "mocha": "^6.2.2",
-    "request": "^2.88.0",
-    "sinon": "^7.5.0"
-  },
-  "description": ""
+    "mocha": "^8.2.1",
+    "sinon": "^9.2.3"
+  }
 }
