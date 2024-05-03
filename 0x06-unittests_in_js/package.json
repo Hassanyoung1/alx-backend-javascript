@@ -14,6 +14,7 @@
   "devDependencies": {
     "chai": "^5.1.0",
     "mocha": "^10.4.0",
-    "selenium-webdriver": "^4.16.0"
+    "selenium-webdriver": "^4.16.0",
+    "sinon": "^17.0.1"
   }
 }
