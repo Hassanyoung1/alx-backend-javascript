@@ -1,7 +1,6 @@
 {
   "name": "8-api",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "./node_modules/mocha/bin/mocha"
@@ -17,7 +16,5 @@
     "request": "^2.88.0",
     "sinon": "^7.5.0"
   },
-  "directories": {
-    "test": "test"
-  }
+  "description": ""
 }
